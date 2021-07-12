@@ -19,7 +19,7 @@ namespace SalesWebMvc.Services
 
         public async Task<List<Seller>> FindAllAsync()
         {
-            return await _context.Seller.ToListAsync();
+            return await _context.Seller.ToListAsync();//para acessar a fonte de dados relacionada a tabela de vendedores e converter para uma lista
         }
 
         public async Task InsertAsync(Seller obj)

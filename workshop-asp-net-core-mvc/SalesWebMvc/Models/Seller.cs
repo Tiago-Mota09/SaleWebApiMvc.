@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 using System.Linq;
 
 namespace SalesWebMvc.Models
@@ -27,7 +28,7 @@ namespace SalesWebMvc.Models
         [Required(ErrorMessage = "{0} required")]
         [Range(100.0, 50000.0, ErrorMessage = "{0} must be from {1} to {2}")]
         [Display(Name = "Base Salary")]
-        [DisplayFormat(DataFormatString = "{0:F2}")]
+        [DisplayFormat(DataFormatString = "R$ {0:F2}")]
         public double BaseSalary { get; set; }
 
         public Department Department { get; set; }
