@@ -11,7 +11,7 @@ namespace SalesWebMvc.Models
         public int Id { get; set; }
 
         [Required(ErrorMessage = "{0} required")]
-        [StringLength(60, MinimumLength = 3, ErrorMessage = "{0} size should be between {2} and {1}")]
+        [StringLength(60, MinimumLength = 3, ErrorMessage = "{0} size should be between {2} and {1}")]//60 = tamanho máximo {0} = pega automaticamente 0 atributo {2} = mínimo {1} = máximo
         public string Name { get; set; }
 
         [Required(ErrorMessage = "{0} required")]
@@ -28,7 +28,7 @@ namespace SalesWebMvc.Models
         [Required(ErrorMessage = "{0} required")]
         [Range(100.0, 50000.0, ErrorMessage = "{0} must be from {1} to {2}")]
         [Display(Name = "Base Salary")]
-        [DisplayFormat(DataFormatString = "R$ {0:F2}")]
+        [DisplayFormat(DataFormatString = "R$ {0:N2}")]
         public double BaseSalary { get; set; }
 
         public Department Department { get; set; }
